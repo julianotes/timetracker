@@ -1,0 +1,14 @@
+@import "/src/components/toggle/toggle.scss";
+.google-calendar__wrap {
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-left: 39px;
+  padding-right: 41px;
+}
+
+.google-calendar__header {
+  @include flex(row,flex-start,center);
+}
+.select-date {
+  margin-left: auto;
+}

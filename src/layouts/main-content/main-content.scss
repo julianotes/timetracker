@@ -1,0 +1,144 @@
+@import "/src/components/calendar/calendar.scss";
+@import  "/src/components/button/right-bar-button.scss";
+@import "/src/layouts/trackers.scss";
+@import "/src/components/modal/modal.scss";
+@import "/src/components/time-tracking/time-tracking.scss";
+@import "/src/components/google-calendar/google-calendar.scss";
+@import "/src/components/calendar/calendar.scss";
+@import "/src/components/slider-time-picker/slider-time-picker.scss";
+.main {
+  background-color: $background_1;
+  height: 100vh;
+  overflow: hidden; 
+}
+.left-bar {
+  position: relative;
+  max-width: 1296px;
+  width: 68%;
+  float:left;
+
+  &:after {
+    content:'';
+    position:absolute;
+    top:20px;
+    right: 24px;
+    border: 2px solid $border-color;
+  }
+}
+
+.left-bar__header{
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 111px 0 96px;
+  height: 157px;
+  @include flex(row, space-between, center);
+}
+.tracker-info {
+  max-width: 624px;
+}
+.all {
+  margin-right: 10px;
+}
+.favorites {
+  width: 92px;
+}
+
+.right-bar__info {
+  margin: 0 auto;
+  width: 100%;
+  height: 68px;
+  position: relative;
+  padding: 0 111px 0 96px;
+  @include flex(row, space-between, flex-start);
+
+  &:after {
+    content:'';
+    position: absolute;
+    bottom:-1px;
+    left:71px;
+    height: 2px;
+    width: 1140px;
+    background-color:$border-color;
+
+    @media(max-width: 1220px){
+      width: 80%;
+    }
+  }
+}
+
+.date {
+  @include H1;
+  font-weight: 400;
+}
+
+.time-controls {
+  @include flex(row, space-between, flex-start);
+  padding-bottom: 15px;
+
+  &-wrap {
+    @include flex(column, center, flex-start);
+    height: 50px;
+  }
+
+}
+
+.time-wrapper{
+  @include flex(column, center,flex-start);  
+}
+
+.total-time {
+  @include H1;
+  color: #BBBBBB;
+  margin-bottom: 10px;
+}
+
+.progress__outer {
+  height: 7px;
+  width: 101px;
+  border-radius: 30px;
+  background-color: $border-color;
+}
+.progress__inner{
+  background-color: $progress-color;
+  width: 30%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.download {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 30px;
+  background-color: $border-color;
+  margin-left: 43px;
+  margin-right: 6px;
+}
+.arrow-top,
+.arrow-line {
+  position: absolute;  
+}
+
+.arrow-top {
+  top:10px;
+  left: 14px;
+}
+.arrow-line {
+  bottom:12px;
+  left:10px;
+}
+
+.trackers__container {
+  max-width: 1178px;
+  margin: 0 auto;
+}
+
+
+// aside 
+.tracker-info{
+  width: 32%;
+  float: right;
+  height: 100%;
+  margin-top: 65px;
+  border-left: 1px solid $border-color;
+}

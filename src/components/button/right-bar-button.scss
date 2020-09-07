@@ -1,0 +1,10 @@
+.right-bar__button {
+  width: 79px;
+  height: 47px;
+  border-radius: 30px;  
+  @include Body2;
+  &:active,
+  &:focus {
+    background-color: $button-color;
+  }
+}

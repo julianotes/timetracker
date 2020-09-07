@@ -1,0 +1,31 @@
+{
+  "name": "timetracker",
+  "version": "1.0.0",
+  "description": "timetracker layout for React app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html --open",
+    "build": "parcel build *.html -d dist --public-url ./ --no-content-hash",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^3.1.0",
+    "postcss-modules": "^3.2.0",
+    "sass": "^1.26.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
+  }
+}

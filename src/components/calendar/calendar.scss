@@ -1,0 +1,104 @@
+.calendar__date {
+  position: relative;
+  background-color: $button-color;
+  color: $accent1;
+  @include Body2;
+  border-radius: 30px;
+  height: 58px;
+  width: 197px;
+  text-align: left;
+  padding:4px 5px 0 31px;
+  margin-bottom: 10px;
+
+  &:after {
+    position:absolute;
+    content: url(/src/assets/images/calendar.svg);
+    right:30px;
+  }
+
+}
+
+.calendar {
+  display: block;
+  position: relative;
+}
+.calendar__wrap{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1555;
+  background-color: $header-link-color;
+  width: 462px;
+  height: 472px;
+  box-shadow: $shadow3;
+  border-radius:10px;
+}
+
+.month{
+  margin: 0 auto;
+  margin-top: 37px;
+  margin-bottom: 30px;
+  @include flex(row, center,center);
+  max-width: 338px;
+}
+.inner__wrap {
+  margin: 0 64px 0 64px;
+}
+.days{  
+  margin: 0 -20px 0 -20px;
+  @include flex(row, center, center);
+  @include caption2;
+  color: #999999;
+}
+.day {
+  text-transform: uppercase;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+
+.dates{
+  margin: 0 -20px 0 -20px;
+  display: flex;
+  flex-wrap: wrap;  
+}
+.data__wrap {
+  @include flex(column, center,center);
+  margin: 4px;
+  width:45px;
+  height:45px; 
+  @include caption2;
+  line-height: 19px;
+  color: #444444; 
+  cursor: pointer;
+  border-radius:70px;
+
+  &:active,
+  &:focus {
+    background-color: $accent1; 
+    color:$header-link-color;   
+  }
+}
+
+.total-tasks__holder {
+  margin: 44px 115px 0 124px;
+  @include flex(row, center,center);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #898989;
+}
+.total-tasks__done__wrap,
+.total-tasks__inprogress__wrap,
+.total-tasks__missed__wrap{
+  @include flex(row, space-between, center);
+}
+.total-tasks__done,
+.total-tasks__inprogress,
+.total-tasks__missed {
+  margin-left: 5px;
+}
+.total-tasks__inprogress__wrap {
+  margin: 0 15px 0 15px;
+}

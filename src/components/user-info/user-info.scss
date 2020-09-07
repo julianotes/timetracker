@@ -1,0 +1,51 @@
+.header__user-info {
+  @include flex(row, flex-end,center);  
+  height: 100%;
+}
+
+.user-info__item {
+  position: relative;
+  margin-top: 6px;
+  margin-right:53px;
+  cursor: pointer;
+
+  @media(max-width: 1024px) {
+    margin-right: 30px;
+  }
+}
+.user-info__icon {
+  fill: #fff;
+}
+.in-icon {
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  z-index: 2;
+  left:10px;
+  top:5px;
+}
+.user-info__item__pic {
+  overflow: hidden;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.user-pic {
+  display: block;
+}
+
+.user-info__list {
+  @include flex(row, flex-end,center);
+  @media(max-width: 768px) {
+    display: none;
+  }
+
+}
+
+.user-info__mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+    padding: 15px;
+  }
+}

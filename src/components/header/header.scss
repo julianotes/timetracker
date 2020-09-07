@@ -1,0 +1,21 @@
+@import "/src/components/nav/nav.scss";
+@import "/src/components/user-info/user-info.scss";
+.header {
+  background-color: $accent1;
+  height: 91px;
+  max-width: 1920px;
+  padding:  0 44px 0 82px;
+  
+  @media(max-width: 1024px){
+    padding: 0 2%;
+  }
+  @media(max-width: 768px) {
+    height: 80px;
+  } 
+
+  .container{
+    @include container; 
+    @include flex(row, space-between, center);
+}
+
+}

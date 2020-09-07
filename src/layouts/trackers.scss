@@ -1,0 +1,119 @@
+@import "/src/components/dropdown/dropdown.scss";
+.tracker__wrap{
+  position: relative;
+  z-index: 5;
+}
+.tracker-menu {
+  position:absolute;
+  right:0;
+  width: 70px;
+  background-color: $accent1;
+  height: 86px;
+  border-radius: 12px;
+  padding: 25px 0 25px 38px;
+  @include flex(column, space-evenly,center);
+  cursor: pointer;
+ 
+  &:hover,
+  &:active,
+  &:focus {
+    transform:translateX(20px);
+    transition: all .2s ease-in-out;
+  }
+  &:hover .dropdown-menu {
+    visibility: visible;
+  }
+
+}
+
+.tracker__item { 
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px dashed $border-color;
+  width: 100%;
+  min-height: 86px;
+  margin: 0 auto;
+  padding: 0 44px 0 45px;
+  @include flex(row,space-between, center);
+  border-radius:10px;
+  background-color: $background_1;
+  cursor: pointer;  
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $tracker-active;
+    box-shadow: $shadow1;
+    transform:translateX(-35px);
+    transition: all .2s ease-in-out;
+  }
+}
+.time-wrap {
+  @include flex(row,center,center);
+  @include Body2;
+  margin-right: 48px;
+
+  .time-start {
+   color: $active-color;
+  }
+}
+
+.color-point{
+  width: 3.25px;
+  height: 76px;
+  border-radius:5px;
+  background-color: $negative-color;
+  margin-right: 27px;
+}
+
+.issure__wrap {
+  @include flex (column, flex-start, flex-start);
+  margin-right: auto;
+}
+.issure-info {
+  @include H2;
+  color: #828282;
+}
+.issure-name {
+  @include Body1;
+  color: $active-color;
+  text-overflow: ellipsis;
+}
+
+.progressbar__default{
+  background-color: $border-color;
+  width: 108px;
+  height: 2px;
+  border-radius:5px;
+}
+
+.progressbar--warn{
+  background-color: $negative-color;
+}
+.progressbar--done {
+  background-color: $positive-color;
+}
+.progressbar--pending{
+  background-color: $progress-color;
+}
+
+.time-interval {
+  @include Body2;
+  color: $interval-color;
+  margin-left: 50px;
+}
+.play-button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: $button-color;
+  border-radius: 30px;
+  margin-left: 51px;
+  margin-right: 13px;
+}
+.play-icon {
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}

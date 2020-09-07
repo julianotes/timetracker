@@ -1,0 +1,44 @@
+@import "/src/components/current-tracker/current-tracker.scss";
+.time-tracking {
+  margin: 0 auto;
+  padding-left: 39px;
+  padding-right: 41px;
+  border-bottom: 1px solid $border-color;
+  height: 350px;  
+}
+.new-worklog {
+  width: 66px;
+  height: 66px;
+  background: $header-link-color;
+  box-shadow: $shadow2;
+  border-radius: 45px;
+  @include flex(row,center,center);
+
+  &:hover {
+    box-shadow: 0px 10px 30px rgba(163, 163, 163, 0.44);
+  }
+}
+
+.new-worklog__caption {
+  text-transform: uppercase;
+}
+.time-tracking__title-wrap {
+  @include flex(row, space-between,center);
+}
+.time-tracking__content-wrap {
+  position: relative;
+  height: 100%;
+  display: none;
+}
+.new-worklog {
+  position: absolute;
+  top: 86px;
+  left: 236px;
+}
+.new-worklog__caption {
+  @include caption2;
+  color:$inactive-color;
+  position: absolute;
+  top: 178px;
+  left: 214px;
+}

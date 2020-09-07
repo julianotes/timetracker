@@ -1,0 +1,88 @@
+@import "./variables.scss";
+
+@mixin container {
+  margin: 0 auto;
+  height: 100%;
+}
+
+@mixin flex($f-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $f-direction;
+  flex-wrap: wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// Fonts
+@mixin Body1 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 144.2%;
+  /* identical to box height, or 29px */
+}
+
+@mixin Body2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144.2%;
+  /* identical to box height, or 26px */
+}
+
+@mixin H1 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 144.2%;
+  /* identical to box height, or 35px */
+}
+
+@mixin H2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144.2%;
+  /* or 26px */
+}
+
+@mixin caption {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 144.2%;
+  /* identical to box height, or 26px */
+  font-variant: small-caps;
+}
+
+@mixin caption2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 144.2%;
+  /* identical to box height, or 23px */
+}
+
+@mixin caption3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 144.2%;
+  /* or 14px */
+}
+
+@mixin small {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 144.2%;
+  /* identical to box height, or 23px */
+}

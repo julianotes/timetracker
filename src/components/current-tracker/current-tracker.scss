@@ -1,0 +1,14 @@
+@import "/src/components/dropdown/dropdown.scss";
+.current-tracker{
+  margin: 0 auto;
+  @include flex(column, center,center);
+}
+.current-tracker__title{
+  @include Body1;
+}
+.current-tracker__sub{
+  text-transform: uppercase;
+  @include Body2;
+  color: #828282;
+}
+

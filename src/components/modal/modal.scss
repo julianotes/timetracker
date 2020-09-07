@@ -1,0 +1,124 @@
+.modal {
+  display: none;
+}
+.modal-overlay {  
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 999;
+  background:rgba(41, 41, 41, 0.2);
+  height: 100vh;
+  width: 100vw;
+}
+.modal-window {
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 660px;
+  height: 470px;
+  border-radius: 10px;  
+  background-color: $header-link-color;
+  box-shadow: $shadow1;
+  padding: 0 61px 0 56px;
+  margin-top:55px;
+}
+.modal-header{
+  @include H2;
+  height: 79px;
+  padding: 30px 0 30px 0;
+}
+.modal-timeline{
+  @include flex(row,center,center);
+  padding-top: 49px;
+  padding-bottom:52px;
+}
+.timeline-scale {
+  width: 543px;
+  height: 10px;
+  background-color: $button-color;
+  border-radius:10px;
+  @include flex(row,center,center);
+}
+.timeline__active {
+  background-color: $progress-color;
+  border-radius:5px;
+  box-shadow:$shadow1;
+  height: 10px;
+  width: 250px;
+  @include flex(row, space-between,center);
+  position: relative;
+}
+
+#filter0_d{
+  box-shadow: $shadow2;
+}
+.timeline-stop{
+  position: absolute;
+  top: -11px;
+  right: -17px;
+  cursor: pointer;  
+}
+.timeline-start {
+  position: absolute;
+  top: -11px;
+  left: -18px;
+  cursor: pointer;
+}
+
+.dash{
+  top:0;  
+  width: 2px;
+  height: 10px;
+  background-color: $progress-color;
+}
+.dash-right{  
+  top:30;
+  right: 20;
+}
+
+
+.modal-name,
+.modal-issue {
+  @include flex(column, center,flex-start);
+  padding-top: 20px;
+}
+.m-name {
+  @include caption3;
+  color:$gray2;
+}
+.m-issue{
+  color:$some-color;
+  @include small;
+  height: 37px;
+  width: 100%;
+  border: 0px solid;
+  border-bottom: 1px solid $border-color;
+  color: $inactive-color;
+}
+
+.modal-controls {
+  margin:  44px 0 46px 0;
+  @include flex (row,center,center); 
+}
+.check,
+.cancel {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  @include flex (row,center,center);
+  margin: 0 15px 0 15px;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1),
+                 0 1px 2px rgba(0,0,0,0.1);
+  }
+}
+.check {
+  box-shadow: $shadow2;
+}
+.cancel{
+  background-color: $background_1;
+}
